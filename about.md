@@ -3,10 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
-A probably adventure.
+A probable adventure.
 
 ...
 
 Probably.
 
-:cat2:
