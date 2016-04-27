@@ -1,0 +1,7 @@
+# Site settings
+baseurl: /probable-adventure
+github_username:  skhan890
+exclude: ['README.md]
+
+# Build settings
+markdown: kramdown
