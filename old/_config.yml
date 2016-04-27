@@ -1,4 +1,0 @@
-markdown: redcarpet
-baseurl: http://localhost:4000
-exclude: ['README.md']
-encoding: utf-8
