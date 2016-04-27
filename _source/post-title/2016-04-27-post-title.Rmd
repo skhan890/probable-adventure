@@ -8,6 +8,14 @@ tags: [example1, example2]
 
 Your markdown here!
 
+
+```{r, echo=F}
+library(brocks)
+blog_opts()
+```
+
+
+
 ```{r}
 plot(1:10)
 ```
