@@ -11,3 +11,18 @@ Your markdown here!
 ```{r}
 plot(1:10)
 ```
+blog_gen()
+
+```{r}
+
+library(metricsgraphics)
+
+plots <- lapply(1:4, function(x) {
+  mjs_plot(rbeta(1000, x, x), width = 300, height = 300, linked = TRUE) %>%
+    mjs_histogram(bar_margin = 2) %>%
+    mjs_labs(x_label = sprintf("Plot %d", x))
+})
+
+mjs_grid(plots)
+
+```
