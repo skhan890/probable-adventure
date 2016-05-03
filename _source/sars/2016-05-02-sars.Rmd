@@ -8,21 +8,25 @@ tags: [example1, example2]
 
 Your markdown here!
 
-```{r}
-plot(1:10)
-```
-blog_gen()
-
-```{r}
-
+```{r,echo=F,eval=T,message=F,warning=F}
 library(metricsgraphics)
+library(RColorBrewer)
+load("C:/Users/Sars/Documents/Spring 2016/Software Engineering/Project/probable-adventure/_source/sars/heroStats.RData")
+```
+<!-- blog_gen() -->
 
-plots <- lapply(1:4, function(x) {
-  mjs_plot(rbeta(1000, x, x), width = 300, height = 300, linked = TRUE) %>%
-    mjs_histogram(bar_margin = 2) %>%
-    mjs_labs(x_label = sprintf("Plot %d", x))
-})
+```{r}
 
-mjs_grid(plots)
+heroStats %>%
+  mjs_plot(x=Rank, y=damage) %>%
+  mjs_point(color_accessor=HeroClass,
+            x_rug=TRUE, y_rug=TRUE,
+            # size_accessor=Rank,
+            # size_range=c(5, 10),
+            color_type="category",
+            color_range=brewer.pal(n=7, name="Spectral")[c(1, 5, 7)]) %>%
+  mjs_labs(x="Rank of player", y="Damage") %>% 
+  mjs_add_legend(legend="Y")
+
 
 ```
