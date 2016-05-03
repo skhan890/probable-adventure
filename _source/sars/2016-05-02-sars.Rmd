@@ -31,18 +31,14 @@ heroStats %>%
 
 
 ```
-n1$save('mychart2.html', standalone = TRUE)
+<!-- n1$save('mychart2.html', standalone = TRUE) -->
 ```{r results = 'asis', comment = NA}
 # require(rCharts)
 # n1 <- nPlot(thorns ~ Rank, data = heroStats[1:100,], group='HeroClass', type = "scatterChart")
 # n1$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
-<iframe src="C:/Users/Sars/Documents/Spring 2016/Software Engineering/Project/probable-adventure/figure/source/sars/2016-05-02-sars/mychart2.html"
-        height="600" width="100%"
-        scrolling="no" seamless="seamless"
-        frameBorder="0">
-</iframe>
-          
 
-babes23
-getwd()
+
+
+<!-- babes23 -->
+<!-- getwd() -->
